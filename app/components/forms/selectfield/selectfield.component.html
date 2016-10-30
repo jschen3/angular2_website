@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label>{{fieldName}}</label>
+    <select ngControl="value" class="form-control" id="{{fieldName}}">
+        <option value=""></option>
+        <option *ngFor="let option of options">{{option}}</option>
+    </select>
+</div>

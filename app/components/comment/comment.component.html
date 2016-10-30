@@ -1,0 +1,15 @@
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="{{ comment.image }}">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ comment.author }}
+    </h4>
+    {{ comment.text }}
+    <div>
+        <like [likeCount]="comment.likeCount" [liked]="comment.liked"></like>
+    </div>
+  </div>
+</div> 

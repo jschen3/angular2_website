@@ -1,0 +1,12 @@
+<carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+    <slide *ngFor ="let slide of slides; let index=index" [active]="slide.active">
+        <div class="carousel-left">
+            <img class="slide-image" src="{{slide.image}}"/>
+        </div>
+        <div class="carousel-right">
+            <h2>{{slide.title}}</h2>
+            <p>{{slide.text}}</p>
+            <p>{{slide.link}}</p>
+        </div>
+    </slide>
+</carousel>

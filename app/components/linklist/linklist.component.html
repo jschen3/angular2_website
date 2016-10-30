@@ -1,0 +1,7 @@
+<div>
+    <ul>
+        <li *ngFor="let link of links" [active]="link.active">
+            <a href="{{link.url}}">{{link.text}}</a>
+        </li>
+    </ul>
+</div>
