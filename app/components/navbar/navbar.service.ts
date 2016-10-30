@@ -3,7 +3,7 @@ import {Link} from '../../models/Link';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class LinkListService {
+export class NavbarService {
 	getLinks():Link[]{		
 	  	let links:Link[]=[{text: "Home", url:"/"},
       					  {text: "Resume", url:"/resume"},

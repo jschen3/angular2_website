@@ -1,5 +1,6 @@
 .menu-icon{
     margin-top:auto;
     margin-bottom:auto;
-    margin-left:3%;
+    display: block;
+    padding-top:10px
 }
