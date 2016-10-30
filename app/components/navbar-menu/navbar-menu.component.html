@@ -1,14 +1,19 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#narbar-collapse" aria-expanded="false">
-        <i class="fa fa-bars"></i>
-    </button>
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li *ngFor="let link of links" class="nav-item" [ngClass]="link.active">
-                    <a href="{{link.url}}">{{link.text}}</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-light bg-faded navbar-fixed-top">
+    <div class="navbar-header">
+        <button class="navbar-toggler hidden-md-up" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbar-menu" 
+            aria-controls="navbar-menu" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+        </button>
+    </div>
+    <div class="collapse navbar-toggleable-sm" id="navbar-menu">
+        <ul class="nav navbar-nav">
+            <li *ngFor="let link of links" class="nav-item" [ngClass]="link.active">
+                <a class="nav-link" href="{{link.url}}">{{link.text}}</a>
+            </li>
+        </ul>
     </div>
 </nav>
