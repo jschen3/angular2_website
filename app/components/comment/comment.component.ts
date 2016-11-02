@@ -1,8 +1,9 @@
 import {Component, Input} from '@angular/core';
 @Component({
+	moduleId:'comment',
 	selector: 'comment',
-	templateUrl:'/app/components/comment/comment.component.html',
-	styleUrls:['/app/components/comment/comment.component.css']
+	templateUrl:'app/components/comment/comment.component.html',
+	styleUrls:['app/components/comment/comment.component.css']
 })
 export class CommentComponent {
 	@Input() comment;

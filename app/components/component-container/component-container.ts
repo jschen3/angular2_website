@@ -4,6 +4,7 @@ import {BasicComponent} from '../../models/BasicComponent';
 import {ArticleImageComponent} from '../article-image/article-image.component';
 import {ArticleTextComponent} from '../article-text/article-text.component';
 @Component({
+    moduleId:'component-container',
     selector: 'component-container',
     template: '<div #componentContainer></div>',
     styleUrls:[],

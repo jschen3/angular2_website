@@ -2,10 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {Link} from '../../models/Link';
 import {NavbarMenuService} from './navbar-menu.service';
 @Component({
+	moduleId:'navbar',
 	selector:'navbar',
-	templateUrl:'/app/components/navbar-menu/navbar-menu.component.html',
+	templateUrl:'app/components/navbar-menu/navbar-menu.component.html',
 	providers:[NavbarMenuService],
-	styleUrls:['/app/components/navbar-menu/navbar-menu.component.css']
+	styleUrls:['app/components/navbar-menu/navbar-menu.component.css']
 })
 export class NavbarMenuComponent implements OnInit{
 	links: Link[] = [];

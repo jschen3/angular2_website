@@ -1,7 +1,8 @@
 import {Component, Input, Output} from '@angular/core';
 @Component({
+    moduleId: 'inputfield',
     selector: 'inputfield',
-    templateUrl:'/app/components/forms/inputfield/inputfield.component.html'
+    templateUrl:'app/components/forms/inputfield/inputfield.component.html'
 })
 export class InputFieldComponent{
     @Input() fieldName;

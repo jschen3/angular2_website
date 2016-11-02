@@ -1,7 +1,8 @@
 import {Component,Input, Output} from '@angular/core';
 @Component({
+    moduleId:'textareafield',
     selector:'textareafield',
-    templateUrl:'/app/components/forms/textareafield/textareafield.component.html'
+    templateUrl:'app/components/form/textareafield/textareafield.component.html'
 })
 export class TextAreaFieldComponent{
     @Input() fieldName;

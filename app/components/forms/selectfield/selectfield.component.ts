@@ -1,7 +1,8 @@
 import {Component, Input,Output} from '@angular/core';
 @Component({
+    moduleId:'selectfield',
     selector: 'selectfield',
-    templateUrl:'/app/components/forms/selectfield/selectfield.component.html',
+    templateUrl:'app/components/forms/selectfield/selectfield.component.html'
 })
 export class SelectFieldComponent{
     @Input() options; 
