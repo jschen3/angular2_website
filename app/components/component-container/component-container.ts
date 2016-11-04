@@ -1,4 +1,4 @@
-import {Component, ComponentFactoryResolver, NgModule, ViewChild, ViewContainerRef, OnInit} from '@angular/core';
+import {Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, OnInit} from '@angular/core';
 import {BasicComponentService} from './basic-component.service';
 import {BasicComponent} from '../../models/BasicComponent';
 import {ArticleImageComponent} from '../article-image/article-image.component';
