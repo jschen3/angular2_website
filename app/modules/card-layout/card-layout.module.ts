@@ -9,6 +9,7 @@ import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
     imports:[BrowserModule, FormsModule, HttpModule, Ng2BootstrapModule],
     declarations:[CardContainerComponent, CardComponent],
     providers:[],
+    exports:[CardContainerComponent, CardComponent],
     bootstrap:[CardContainerComponent, CardComponent]
 }) 
 export class CardLayoutModule{}

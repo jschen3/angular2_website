@@ -1,0 +1,12 @@
+.card{
+    display:inline-block;
+    
+}
+.card-img-top{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+.card-block{
+    max-width:300px;
+}

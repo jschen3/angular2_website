@@ -18,9 +18,11 @@ export class CardContainerComponent implements OnInit{
         this.cardList=this.cardService.getCards();
         console.log(this.cardList);
         for (let card of this.cardList){
-            let cardFactory=this.componentFactoryResolver.resolveComponentFactory(CardComponent);
-            let cardComponent = this.cardContainer.createComponent(cardFactory);
-            cardComponent.instance.card = card;
+            if (card!=undefined){            
+                let cardFactory=this.componentFactoryResolver.resolveComponentFactory(CardComponent);
+                let cardComponent = this.cardContainer.createComponent(cardFactory);
+                cardComponent.instance.card = card; 
+            }           
         }
     }
 
