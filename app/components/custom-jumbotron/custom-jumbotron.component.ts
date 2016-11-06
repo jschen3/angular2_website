@@ -16,8 +16,10 @@ export class CustomJumbotronComponent implements OnInit{
     private componentListLeft:BasicComponent[];
     private componentListRight:BasicComponent[];
     private jumbotron:JumbotronInput;
-    constructor(private componentFactoryResolver: ComponentFactoryResolver, private jumbotronService:jumbotronService ){}
+    constructor(private componentFactoryResolver: ComponentFactoryResolver, private jumbotronService:JumbotronService ){}
     ngOnInit(){
-        this.jumbotron=
+        this.jumbotron=this.jumbotronService.getJumbotron();
+        this.componentListLeft=this.jumbotron.left;
+        this.componentListRight=this.jumbotron.right;
     }
 }
