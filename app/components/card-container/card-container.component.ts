@@ -6,7 +6,8 @@ import {CardService} from './card.service';
 @Component({
     moduleId: 'CardContainer',
     selector: 'cardcontainer',
-    template:'<div #cardContainer></div>',
+    template:'<div class="container"> <div class="card-container" #cardContainer></div></div>',
+    styleUrls:['app/components/card-container/card-container.component.css'],
     providers:[CardService],
     entryComponents:[CardComponent]
 })

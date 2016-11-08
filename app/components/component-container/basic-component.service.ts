@@ -5,9 +5,9 @@ import {BasicComponent} from '../../models/BasicComponent';
 export class BasicComponentService {
 	getComponents():BasicComponent[]{
 		let components:BasicComponent[]=[
-		{type: "text", content:"bla lorem ipsum blady bla"},
-		{type: "image", content: "http://lorempixel.com/300/300/people?5"},
-		{type: "text", content: "bla lorem samantha pokemon"}]
+		{type: "text", content:"bla lorem ipsum blady bla", parentId:"blasdf"},
+		{type: "image", content:"http://lorempixel.com/300/300/people?5", parentId:"blasdf"},
+		{type: "text", content:"bla lorem samantha pokemon", parentId:"ladf1",}]
 		return components;
 	}
 }

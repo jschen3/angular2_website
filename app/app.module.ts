@@ -8,15 +8,15 @@ import {CommentComponent} from './components/comment/comment.component';
 import {LikeComponent} from './components/like/like.component';
 import './rxjs-extensions';
 import {ComponentContainer} from './components/component-container/component-container';
-import {ArticleTextComponent} from './components/article-text/article-text.component';
-import {ArticleImageComponent} from './components/article-image/article-image.component';
+import {TextComponent} from './components/text/text.component';
+import {ImageComponent} from './components/image/image.component';
 import {CardLayoutModule} from './modules/card-layout/card-layout.module';
 import {CardContainerComponent} from './components/card-container/card-container.component';
 import {CardComponent} from './components/card/card.component';
 import {NavbarMenuComponent} from './components/navbar-menu/navbar-menu.component';
 import {NavbarComponent} from './components/navbar-base/navbar-base.component';
 import {NavbarModule} from './modules/navbar/navbar.module';
-import {AboutMeJumbotronComponent} from './components/aboutme-jumbotron/aboutme-jumbotron.component';
+import {JumbotronComponent} from './components/jumbotron/jumbotron.component';
  @NgModule({
   imports: [
     BrowserModule,
@@ -30,13 +30,13 @@ import {AboutMeJumbotronComponent} from './components/aboutme-jumbotron/aboutme-
     CommentComponent,
     LikeComponent,
     ComponentContainer,
-    ArticleImageComponent,
-    ArticleTextComponent,
-    AboutMeJumbotronComponent
+    ImageComponent,
+    TextComponent,
+    JumbotronComponent
   ],
   providers: [
   ],
-  bootstrap: [ CardContainerComponent, NavbarComponent, AboutMeJumbotronComponent]
+  bootstrap: [ CardContainerComponent, NavbarComponent, JumbotronComponent]
   //MainpageCarouselComponent, CommentListComponent, InputFieldComponent, SelectFieldComponent, TextAreaFieldComponent
 })
 export class AppModule {

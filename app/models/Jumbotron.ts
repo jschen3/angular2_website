@@ -1,6 +1,8 @@
 import {BasicComponent} from './BasicComponent';
 export class Jumbotron{
     id:string;
-    left:BasicComponent[];
-    right:BasicComponent[];
+    text:string;
+    heading:string;
+    image:string;
+    link:string;
 }

@@ -1,0 +1,11 @@
+.jumbotron{
+    margin-top: 20px;
+    width:100%;
+}
+.jumbotron-left{
+    float:left;
+}
+.jumbotron-image{
+    padding-top:20px;
+    padding-left:50px;
+}

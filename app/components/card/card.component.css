@@ -1,8 +1,8 @@
 .card{
     display:inline-block;
-    
 }
 .card-img-top{
+    padding-top:20px;
     margin-left:auto;
     margin-right:auto;
     display:block;
