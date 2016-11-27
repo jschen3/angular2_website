@@ -1,0 +1,22 @@
+<button type="button" class="login-btn btn btn-primary btn-md" data-toggle="modal" data-target="#loginModal">Login
+</button>
+
+<div class="login-modal modal fade" id="loginModal" role="dialog" aria-labeledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="loginLabel">{{loginModalTitle}}</h4>
+                </div>
+                <div class="modal-body" #loginModalBody>
+                               
+                </div>
+                <div class="modal-footer">
+                    <span>{{loginModalFooterText}}</span>
+                    <a class="text-primary" (click)="loginModalFooterLinkClicked()">{{loginModalFooterLink}}</a>
+                </div>
+            </div>
+    </div>
+</div>
