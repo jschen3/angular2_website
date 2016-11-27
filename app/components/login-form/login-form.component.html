@@ -24,6 +24,7 @@
             id="password" 
             [(ngModel)]="password"
             #passwordInputField="ngModel"
+            placeholder="Password"
             required/>
         <div [hidden]="passwordInputField.valid || passwordInputField.pristine" class="alert alert-danger">
         The password field is required.
