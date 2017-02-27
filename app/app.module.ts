@@ -6,7 +6,6 @@ import {CommentListComponent} from './components/commentlist/commentlist.compone
 import {CommentListService} from './components/commentlist/commentlist.service';
 import {CommentComponent} from './components/comment/comment.component';
 import {LikeComponent} from './components/like/like.component';
-import './rxjs-extensions';
 import {ComponentContainer} from './components/component-container/component-container';
 import {TextComponent} from './components/text/text.component';
 import {ImageComponent} from './components/image/image.component';

@@ -14,8 +14,5 @@ export class NavbarComponent implements OnInit{
     ngOnInit(){
         let navbarMenuFactory = this.componentFactoryResolver.resolveComponentFactory(NavbarMenuComponent);
         this.navbarContainer.createComponent(navbarMenuFactory);
-
-        let navbarLoginFactory = this.componentFactoryResolver.resolveComponentFactory(LoginDialogComponent);
-        this.navbarContainer.createComponent(navbarLoginFactory);
     }
 }
