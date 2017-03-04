@@ -13,7 +13,7 @@ import {CardLayoutModule} from './modules/card-layout/card-layout.module';
 import {CardContainerComponent} from './components/card-container/card-container.component';
 import {CardComponent} from './components/card/card.component';
 import {NavbarMenuComponent} from './components/navbar-menu/navbar-menu.component';
-import {NavbarComponent} from './components/navbar-base/navbar-base.component';
+import {NavbarComponent} from './components/navbar-container/navbar-container.component';
 import {NavbarModule} from './modules/navbar/navbar.module';
 import {JumbotronComponent} from './components/jumbotron/jumbotron.component';
  @NgModule({

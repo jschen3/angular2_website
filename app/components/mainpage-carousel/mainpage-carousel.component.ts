@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CarouselModule} from 'ng2-bootstrap/ng2-bootstrap';
 import {Slide} from '../../models/Slide';
 import {SlideService} from './slide.service';
 @Component({
