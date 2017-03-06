@@ -1,5 +1,4 @@
 export class BasicComponent {
-	type: string;
+	class: string;
 	content: string;
-	parentId:string;
 }

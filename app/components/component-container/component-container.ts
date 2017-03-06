@@ -1,5 +1,5 @@
 import {Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, OnInit} from '@angular/core';
-import {BasicComponentService} from './basic-component.service';
+import {ComponentContainerService} from './component-container.service';
 import {BasicComponent} from '../../models/BasicComponent';
 import {ImageComponent} from '../image/image.component';
 import {TextComponent} from '../text/text.component';
@@ -8,13 +8,13 @@ import {TextComponent} from '../text/text.component';
     selector: 'component-container',
     template: '<div #componentContainer></div>',
     styleUrls:[],
-    providers:[BasicComponentService],
+    providers:[ComponentContainerService],
     entryComponents:[ImageComponent, TextComponent]
 })
 export class ComponentContainer implements OnInit{
     @ViewChild('componentContainer', {read:ViewContainerRef}) componentContainer: ViewContainerRef;
     private componentList:BasicComponent[];
-    constructor(private componentFactoryResolver: ComponentFactoryResolver, private basicComponentService:BasicComponentService ){}
+    constructor(private componentFactoryResolver: ComponentFactoryResolver, private basicComponentService:ComponentContainerService ){}
     ngOnInit(){
         this.componentList=this.basicComponentService.getComponents();
         for(let component of this.componentList){

@@ -1,14 +1,14 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@3.10.8
-3 info using node@v6.8.1
+2 info using npm@3.10.10
+3 info using node@v6.9.5
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle angular2-quickstart@1.0.0~prestart: angular2-quickstart@1.0.0
 6 silly lifecycle angular2-quickstart@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle angular2-quickstart@1.0.0~start: angular2-quickstart@1.0.0
 8 verbose lifecycle angular2-quickstart@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Jimmy/Desktop/angular2_website/node_modules/.bin:/Users/Jimmy/.sdkman/candidates/springboot/current/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/bin:/usr/local/androidsdk/tools:/usr/local/androidsdk/platform-tools:/bin:/opt/subversion/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/CrossPack-AVR/bin:/usr/texbin:/Applications/microchip/xc16/v1.21/bin:/usr/local/apache-cxf/apache-cxf-2.7.5/bin:/usr/local/apache-maven/apache-maven-3.2.1/bin:/Users/Jimmy/.rvm/bin:/usr/local/apache-maven/apache-maven-3.2.1/bin:/Applications/apache-tomcat-7.0.26/bin:/usr/local/apache-cxf/apache-cxf-2.7.5/bin
-10 verbose lifecycle angular2-quickstart@1.0.0~start: CWD: /Users/Jimmy/Desktop/angular2_website
+9 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jimmy/Desktop/angular2_website/node_modules/.bin:/Users/jimmy/Library/Android/sdk/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle angular2-quickstart@1.0.0~start: CWD: /Users/jimmy/Desktop/angular2_website
 11 silly lifecycle angular2-quickstart@1.0.0~start: Args: [ '-c', 'tsc && concurrently "npm run tsc:w" "npm run lite" ' ]
 12 silly lifecycle angular2-quickstart@1.0.0~start: Returned: code: 2  signal: null
 13 info lifecycle angular2-quickstart@1.0.0~start: Failed to exec start script
@@ -23,11 +23,11 @@
 14 verbose stack     at maybeClose (internal/child_process.js:877:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid angular2-quickstart@1.0.0
-16 verbose cwd /Users/Jimmy/Desktop/angular2_website
-17 error Darwin 16.1.0
+16 verbose cwd /Users/jimmy/Desktop/angular2_website
+17 error Darwin 16.4.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
-19 error node v6.8.1
-20 error npm  v3.10.8
+19 error node v6.9.5
+20 error npm  v3.10.10
 21 error code ELIFECYCLE
 22 error angular2-quickstart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
 22 error Exit status 2

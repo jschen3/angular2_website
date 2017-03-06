@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {BasicComponent} from '../../models/BasicComponent';
 
 @Injectable()
-export class BasicComponentService {
+export class ComponentContainerService {
 	getComponents():BasicComponent[]{
 		let components:BasicComponent[]=[
 		{type: "text", content:"bla lorem ipsum blady bla", parentId:"blasdf"},
