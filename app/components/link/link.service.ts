@@ -1,16 +1,16 @@
 import {Injectable, Input} from '@angular/core';
 import {Http} from '@angular/http';
-import {BasicComponentContent} from '../../models/BasicComponentContent';
+import {Link} from '../../models/Link';
 @Injectable()
-export class ImageService{
+export class LinkService{
      @Input() sourceUrl;
-     private content:BasicComponentContent;
+     private content:Link;
      constructor(private http:Http){
      }
     
-     getContent():BasicComponentContent{
+     getContent():Link{
         //this.http.get(this.sourceUrl).map(res=>this.content=res.json());
-        this.content={class: "", content: ""};
+        this.content={text: "", url: "", class:""};
         return this.content;
     }
 }

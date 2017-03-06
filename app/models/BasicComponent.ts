@@ -1,4 +1,4 @@
 export class BasicComponent {
-	class: string;
-	content: string;
+	componentType: String
+	sourceUrl: String
 }

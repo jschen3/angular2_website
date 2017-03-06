@@ -27,11 +27,13 @@ import {JumbotronComponent} from './components/jumbotron/jumbotron.component';
     LikeComponent,
     ImageComponent,
     TextComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    ComponentContainer,
+    CardComponent
   ],
   providers: [
   ],
-  bootstrap: [ NavbarComponent]
+  bootstrap: [ NavbarComponent, ComponentContainer]
   //MainpageCarouselComponent, CommentListComponent, InputFieldComponent, SelectFieldComponent, TextAreaFieldComponent
 })
 export class AppModule {

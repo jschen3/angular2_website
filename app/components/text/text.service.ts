@@ -1,14 +1,14 @@
 import {Injectable, Input} from '@angular/core';
 import {Http} from '@angular/http';
-import {BasicComponent} from '../../models/BasicComponent';
+import {BasicComponentContent} from '../../models/BasicComponentContent';
 @Injectable()
 export class TextService{
      @Input() sourceUrl;
-     private content:BasicComponent;
+     private content:BasicComponentContent;
      constructor(private http:Http){
      }
     
-     getContent():BasicComponent{
+     getContent():BasicComponentContent{
         //this.http.get(this.sourceUrl).map(res=>this.content=res.json());
         this.content={class: "", content: ""};
         return this.content;
