@@ -17,6 +17,6 @@ export class TextComponent implements OnInit{
         this.textService.sourceUrl=this.sourceUrl;
         let content:BasicComponentContent=this.textService.getContent();
         this.text = content.content;
-        this.class= content.class;
+        this.class= content.style;
     }
 }

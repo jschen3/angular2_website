@@ -1,4 +1,4 @@
-import {Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, OnInit} from '@angular/core';
+import {Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, OnInit, Input} from '@angular/core';
 import {ComponentContainerService} from './component-container.service';
 import {BasicComponent} from '../../models/BasicComponent';
 import {ImageComponent} from '../image/image.component';
@@ -12,13 +12,15 @@ import {LinkComponent} from '../link/link.component';
     template: '<div #componentContainer></div>',
     styleUrls:[],
     providers:[ComponentContainerService],
-    entryComponents:[ImageComponent, TextComponent, CardComponent]
+    entryComponents:[ImageComponent, TextComponent, CardComponent, LinkComponent]
 })
 export class ComponentContainer implements OnInit{
+    @Input() sourceUrl;
     @ViewChild('componentContainer', {read:ViewContainerRef}) componentContainer: ViewContainerRef;
     private componentList:BasicComponent[];
     constructor(private componentFactoryResolver: ComponentFactoryResolver, private componentService:ComponentContainerService ){}
     ngOnInit(){
+        this.componentService.sourceUrl=this.sourceUrl;
         this.componentList=this.componentService.getComponents();
         for(let component of this.componentList){
             if (component.componentType=="image"){
@@ -35,6 +37,16 @@ export class ComponentContainer implements OnInit{
                 let cardComponentFactory = this.componentFactoryResolver.resolveComponentFactory(CardComponent);
                 let cardComponent = this.componentContainer.createComponent(cardComponentFactory);
                 cardComponent.instance.sourceUrl = component.sourceUrl;
+            }
+            else if (component.componentType=="componentcontainer"){
+                let componentContainerFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentContainer);
+                let componentContainter = this.componentContainer.createComponent(componentContainerFactory);
+                componentContainter.instance.sourceUrl = component.sourceUrl;
+            }
+            else if (component.componentType=="link"){
+                let linkComponentFactory = this.componentFactoryResolver.resolveComponentFactory(LinkComponent);
+                let linkComponent = this.componentContainer.createComponent(linkComponentFactory);
+                linkComponent.instance.sourceUrl = component.sourceUrl;
             }
         }
     }

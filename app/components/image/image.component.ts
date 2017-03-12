@@ -19,7 +19,7 @@ export class ImageComponent implements OnInit{
         this.imageService.sourceUrl = this.sourceUrl;
         let content:BasicComponentContent=this.imageService.getContent();
         this.image = content.content;
-        this.class= content.class;
+        this.class= content.style;
     }
     
 }

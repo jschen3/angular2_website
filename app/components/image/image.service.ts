@@ -10,7 +10,7 @@ export class ImageService{
     
      getContent():BasicComponentContent{
         //this.http.get(this.sourceUrl).map(res=>this.content=res.json());
-        this.content={class: "", content: ""};
+        this.content={style: "", content: ""};
         return this.content;
     }
 }

@@ -1,8 +1,9 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Input} from '@angular/core';
 import {BasicComponent} from '../../models/BasicComponent';
 
 @Injectable()
 export class ComponentContainerService {
+	@Input() sourceUrl;
 	getComponents():BasicComponent[]{
 		let components:BasicComponent[]=[
 		{componentType: "text", sourceUrl: "http://textsourceurl" },

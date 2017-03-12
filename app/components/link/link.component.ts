@@ -18,7 +18,7 @@ export class LinkComponent implements OnInit{
     ngOnInit(){
         let content:Link=this.linkService.getContent();
         this.text = content.text;
-        this.class= content.class;
+        this.class= content.style;
         this.url= content.url;
     }
     
