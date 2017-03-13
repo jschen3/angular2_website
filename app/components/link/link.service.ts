@@ -9,8 +9,12 @@ export class LinkService{
      }
     
      getContent():Link{
-        //this.http.get(this.sourceUrl).map(res=>this.content=res.json());
-        this.content={text: "", url: "", class:""};
-        return this.content;
+        this.http.get(this.sourceUrl).subscribe(res=>{
+            this.content=res.json();
+            console.log("link:" + this.content);
+			return this.content;
+        });
+        //this.content={text: "", url: "", style:""};
+        return null;
     }
 }

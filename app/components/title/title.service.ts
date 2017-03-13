@@ -9,8 +9,8 @@ export class TitleService{
      }
     
      getContent():BasicComponentContent{
-        //this.http.get(this.sourceUrl).map(res=>this.content=res.json());
-        this.content={style: "", content: ""};
+        this.http.get(this.sourceUrl).subscribe(res=>this.content=res.json());
+        //this.content={style: "", content: ""};
         return this.content;
     }
 }

@@ -9,8 +9,12 @@ export class TextService{
      }
     
      getContent():BasicComponentContent{
-        //this.http.get(this.sourceUrl).map(res=>this.content=res.json());
-        this.content={style: "", content: ""};
-        return this.content;
+        this.http.get(this.sourceUrl).subscribe(res=>{
+            this.content=res.json();
+            console.log("text:" + this.content);
+			return this.content;
+        });
+        //this.content={style: "", content: ""};
+        return null;
     }
 }

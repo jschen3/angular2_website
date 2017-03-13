@@ -21,33 +21,34 @@ export class ComponentContainer implements OnInit{
     constructor(private componentFactoryResolver: ComponentFactoryResolver, private componentService:ComponentContainerService ){}
     ngOnInit(){
         this.componentService.sourceUrl=this.sourceUrl;
-        this.componentList=this.componentService.getComponents();
-        for(let component of this.componentList){
-            if (component.componentType=="image"){
-                let imageComponentFactory = this.componentFactoryResolver.resolveComponentFactory(ImageComponent);
-                let imageComponent = this.componentContainer.createComponent(imageComponentFactory);
-                imageComponent.instance.sourceUrl=component.sourceUrl;
+        this.componentService.getComponents().map((componentList) => {
+            for(let component of this.componentList){
+                if (component.componentType=="image"){
+                    let imageComponentFactory = this.componentFactoryResolver.resolveComponentFactory(ImageComponent);
+                    let imageComponent = this.componentContainer.createComponent(imageComponentFactory);
+                    imageComponent.instance.sourceUrl=component.sourceUrl;
+                }
+                else if (component.componentType=="text"){
+                    let textComponentFactory = this.componentFactoryResolver.resolveComponentFactory(TextComponent);
+                    let textComponent = this.componentContainer.createComponent(textComponentFactory);
+                    textComponent.instance.sourceUrl=component.sourceUrl;
+                }
+                else if (component.componentType=="card"){
+                    let cardComponentFactory = this.componentFactoryResolver.resolveComponentFactory(CardComponent);
+                    let cardComponent = this.componentContainer.createComponent(cardComponentFactory);
+                    cardComponent.instance.sourceUrl = component.sourceUrl;
+                }
+                else if (component.componentType=="componentcontainer"){
+                    let componentContainerFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentContainer);
+                    let componentContainter = this.componentContainer.createComponent(componentContainerFactory);
+                    componentContainter.instance.sourceUrl = component.sourceUrl;
+                }
+                else if (component.componentType=="link"){
+                    let linkComponentFactory = this.componentFactoryResolver.resolveComponentFactory(LinkComponent);
+                    let linkComponent = this.componentContainer.createComponent(linkComponentFactory);
+                    linkComponent.instance.sourceUrl = component.sourceUrl;
+                }
             }
-            else if (component.componentType=="text"){
-                let textComponentFactory = this.componentFactoryResolver.resolveComponentFactory(TextComponent);
-                let textComponent = this.componentContainer.createComponent(textComponentFactory);
-                textComponent.instance.sourceUrl=component.sourceUrl;
-            }
-            else if (component.componentType=="card"){
-                let cardComponentFactory = this.componentFactoryResolver.resolveComponentFactory(CardComponent);
-                let cardComponent = this.componentContainer.createComponent(cardComponentFactory);
-                cardComponent.instance.sourceUrl = component.sourceUrl;
-            }
-            else if (component.componentType=="componentcontainer"){
-                let componentContainerFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentContainer);
-                let componentContainter = this.componentContainer.createComponent(componentContainerFactory);
-                componentContainter.instance.sourceUrl = component.sourceUrl;
-            }
-            else if (component.componentType=="link"){
-                let linkComponentFactory = this.componentFactoryResolver.resolveComponentFactory(LinkComponent);
-                let linkComponent = this.componentContainer.createComponent(linkComponentFactory);
-                linkComponent.instance.sourceUrl = component.sourceUrl;
-            }
-        }
+        });
     }
 }
