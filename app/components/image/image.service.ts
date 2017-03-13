@@ -13,7 +13,7 @@ export class ImageService{
             this.content=res.json();
             console.log("image:" + this.content);
 			return this.content;
-        }
+        });
         //this.content={style: "", content: ""};
         return null;
     }
