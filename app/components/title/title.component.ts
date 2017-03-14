@@ -15,8 +15,9 @@ export class TitleComponent implements OnInit{
 
     }
     ngOnInit(){
-        let content:BasicComponentContent=this.titleService.getContent();
-        this.title = content.content;
-        this.class= content.style;
+        this.titleService.getContent().then(content =>{
+            this.title = content.content;
+            this.class = content.style;
+        });
     }
 }

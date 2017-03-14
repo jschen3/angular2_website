@@ -16,10 +16,10 @@ export class ImageComponent implements OnInit{
         
     }
     ngOnInit(){
-        this.imageService.sourceUrl = this.sourceUrl;
-        let content:BasicComponentContent=this.imageService.getContent();
-        this.image = content.content;
-        this.class= content.style;
+        this.imageService.getContent().then(content=>{
+            this.image =content.content;
+            this.class = content.style;
+        });
     }
     
 }

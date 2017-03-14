@@ -1,6 +1,9 @@
 import {Injectable, Input} from '@angular/core';
 import {Http} from '@angular/http';
 import {Link} from '../../models/Link';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class LinkService{
      @Input() sourceUrl;
@@ -8,13 +11,9 @@ export class LinkService{
      constructor(private http:Http){
      }
     
-     getContent():Link{
-        this.http.get(this.sourceUrl).subscribe(res=>{
-            this.content=res.json();
-            console.log("link:" + this.content);
-			return this.content;
-        });
-        //this.content={text: "", url: "", style:""};
-        return null;
+    getContent():Promise<Link>{
+        return this.http.get(this.sourceUrl).toPromise().then(response => response.json().data as Link);	
     }
+
+    
 }

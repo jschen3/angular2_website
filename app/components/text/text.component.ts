@@ -14,9 +14,9 @@ export class TextComponent implements OnInit{
     class;
     constructor(private textService:TextService){}
     ngOnInit(){
-        this.textService.sourceUrl=this.sourceUrl;
-        let content:BasicComponentContent=this.textService.getContent();
-        this.text = content.content;
-        this.class= content.style;
+        this.textService.getContent().then(content => {
+            this.text= content.content;
+            this.class = content.style;
+        });
     }
 }

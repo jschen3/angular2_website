@@ -21,7 +21,9 @@ export class ComponentContainer implements OnInit{
     constructor(private componentFactoryResolver: ComponentFactoryResolver, private componentService:ComponentContainerService ){}
     ngOnInit(){
         this.componentService.sourceUrl=this.sourceUrl;
-        this.componentService.getComponents().map((componentList) => {
+        this.componentService.getComponents().then(
+            res=> {
+                this.componentList = res;
             for(let component of this.componentList){
                 if (component.componentType=="image"){
                     let imageComponentFactory = this.componentFactoryResolver.resolveComponentFactory(ImageComponent);
