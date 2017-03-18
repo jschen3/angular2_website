@@ -9,13 +9,14 @@ import {LinkComponent} from '../link/link.component';
 @Component({
     moduleId:'component-container',
     selector: 'component-container',
-    template: '<div #componentContainer></div>',
+    template: '<div class="{{style}}" #componentContainer></div>',
     styleUrls:[],
     providers:[ComponentContainerService],
     entryComponents:[ImageComponent, TextComponent, CardComponent, LinkComponent]
 })
 export class ComponentContainer implements OnInit{
     @Input() sourceUrl;
+    @Input() style;
     @ViewChild('componentContainer', {read:ViewContainerRef}) componentContainer: ViewContainerRef;
     private componentList:BasicComponent[];
     constructor(private componentFactoryResolver: ComponentFactoryResolver, private componentService:ComponentContainerService ){}
@@ -39,16 +40,19 @@ export class ComponentContainer implements OnInit{
                     let cardComponentFactory = this.componentFactoryResolver.resolveComponentFactory(CardComponent);
                     let cardComponent = this.componentContainer.createComponent(cardComponentFactory);
                     cardComponent.instance.sourceUrl = component.sourceUrl;
+                    cardComponent.instance.style=component.style;
                 }
                 else if (component.componentType=="componentcontainer"){
                     let componentContainerFactory = this.componentFactoryResolver.resolveComponentFactory(ComponentContainer);
-                    let componentContainter = this.componentContainer.createComponent(componentContainerFactory);
-                    componentContainter.instance.sourceUrl = component.sourceUrl;
+                    let componentContainer = this.componentContainer.createComponent(componentContainerFactory);
+                    componentContainer.instance.sourceUrl = component.sourceUrl;
+                    componentContainer.instance.style=component.style;
                 }
                 else if (component.componentType=="link"){
                     let linkComponentFactory = this.componentFactoryResolver.resolveComponentFactory(LinkComponent);
                     let linkComponent = this.componentContainer.createComponent(linkComponentFactory);
                     linkComponent.instance.sourceUrl = component.sourceUrl;
+                    
                 }
             }
         });

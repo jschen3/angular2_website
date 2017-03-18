@@ -5,7 +5,7 @@ import {LinkService} from './link.service';
     moduleId:'link',
     selector: 'link',
     templateUrl: 'app/components/link/link.component.html',
-    styleUrls:['app/components/link/link.component.css']
+    providers:[LinkService]
 })
 export class LinkComponent implements OnInit{
     @Input() sourceUrl;
@@ -16,6 +16,7 @@ export class LinkComponent implements OnInit{
         
     }
     ngOnInit(){
+        this.linkService.sourceUrl=this.sourceUrl;
         this.linkService.getContent().then(content =>{
             this.text = content.text;
             this.class= content.style;

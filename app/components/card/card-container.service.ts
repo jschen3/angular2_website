@@ -5,7 +5,7 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 @Injectable()
-export class ComponentContainerService {
+export class CardContainerService {
 	constructor(private http: Http){
 
 	}

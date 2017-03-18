@@ -11,7 +11,7 @@ export class ImageService{
      }
     
      getContent():Promise<BasicComponentContent>{
-        return this.http.get(this.sourceUrl).toPromise().then(response => response.json().data as BasicComponentContent);
+        return this.http.get(this.sourceUrl).toPromise().then(response => response.json() as BasicComponentContent);
        
     }
 }

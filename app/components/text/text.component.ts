@@ -9,11 +9,13 @@ import {TextService} from './text.service';
     providers:[TextService]
 })
 export class TextComponent implements OnInit{
-    @Input() sourceUrl
+    @Input() sourceUrl;
+    @Input() style;
     text;
     class;
     constructor(private textService:TextService){}
     ngOnInit(){
+        this.textService.sourceUrl=this.sourceUrl;
         this.textService.getContent().then(content => {
             this.text= content.content;
             this.class = content.style;

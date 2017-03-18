@@ -1,3 +1,14 @@
 .modal-backdrop{
     position:static;
 }
+.aboutMeCard{
+    float:left;
+    width:50%;
+}
+.projectBlogContainer{
+    float:right;
+    width:50%;
+}
+.card-text{
+    display:inline-block;
+}

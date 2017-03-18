@@ -11,10 +11,12 @@ import {TitleService} from './title.service';
 export class TitleComponent implements OnInit{
     title;
     class;
+    @Input() sourceUrl;
     constructor(private titleService:TitleService){
 
     }
     ngOnInit(){
+        this.titleService.sourceUrl=this.sourceUrl;
         this.titleService.getContent().then(content =>{
             this.title = content.content;
             this.class = content.style;

@@ -12,7 +12,7 @@ export class LinkService{
      }
     
     getContent():Promise<Link>{
-        return this.http.get(this.sourceUrl).toPromise().then(response => response.json().data as Link);	
+        return this.http.get(this.sourceUrl).toPromise().then(response => response.json() as Link);	
     }
 
     

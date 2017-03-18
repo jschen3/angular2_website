@@ -10,12 +10,14 @@ import {BasicComponentContent} from '../../models/BasicComponentContent';
 })
 export class ImageComponent implements OnInit{
     @Input() sourceUrl
+    @Input() style
     image;
     class;
     constructor(private imageService: ImageService){
         
     }
     ngOnInit(){
+        this.imageService.sourceUrl=this.sourceUrl;
         this.imageService.getContent().then(content=>{
             this.image =content.content;
             this.class = content.style;
