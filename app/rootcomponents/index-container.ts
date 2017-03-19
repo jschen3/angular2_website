@@ -4,7 +4,7 @@ import {ComponentContainer} from '../components/component-container/component-co
 @Component({
     moduleId:'index-container',
     selector:'index-container',
-    template: '<div #indexContainer></div>',
+    template: '<div class="index-container" #indexContainer></div>',
     styleUrls:[],
     entryComponents:[ComponentContainer]
 })

@@ -3,12 +3,22 @@
 }
 .aboutMeCard{
     float:left;
-    width:50%;
+    max-width: 500px;
+    padding-left:50px;
+    padding-right:50px;
 }
-.projectBlogContainer{
-    float:right;
-    width:50%;
+.projectBlogCard{
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    max-width: 500px;
+    float:left;
 }
-.card-text{
-    display:inline-block;
+.indexContainer{
+    margin-left:auto;
+    margin-right:auto;
+}
+.aboutMeCardLink{
+    height: 20px;
+    width: 100px;
 }
