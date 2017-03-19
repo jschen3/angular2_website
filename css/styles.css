@@ -1,24 +1,29 @@
 .modal-backdrop{
     position:static;
 }
+.card-image{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+.card{
+    max-width:450px;
+}
 .aboutMeCard{
-    float:left;
-    max-width: 500px;
-    padding-left:50px;
-    padding-right:50px;
-}
-.projectBlogCard{
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-left: 50px;
-    max-width: 500px;
+    margin-top:auto;
+    margin-bottom: auto;
+    padding-left:25px;
+    padding-right:25px;
+    margin-right:50px;
     float:left;
 }
-.indexContainer{
-    margin-left:auto;
-    margin-right:auto;
+.projectBlogContainer{
+    margin-left:25px;
 }
-.aboutMeCardLink{
-    height: 20px;
-    width: 100px;
+.projectCard{
+    padding-left:25px;
+    padding-right:25px;
+}
+.container{
+    padding-top: 30px;
 }

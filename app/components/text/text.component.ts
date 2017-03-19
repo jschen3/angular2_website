@@ -2,8 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {BasicComponentContent} from '../../models/BasicComponentContent';
 import {TextService} from './text.service';
 @Component({
-    moduleId:'text',
-    selector: 'text',
+    moduleId:'text-component',
+    selector: 'text-component',
     templateUrl: 'app/components/text/text.component.html',
     styleUrls:['app/components/text/text.component.css'],
     providers:[TextService]
