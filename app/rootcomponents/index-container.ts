@@ -15,6 +15,6 @@ export class IndexContainer implements OnInit{
     ngOnInit(){
         let componentFactory=this.componentFactoryResolver.resolveComponentFactory(ComponentContainer);
         let componentContainer = this.indexContainer.createComponent(componentFactory);
-        componentContainer.instance.sourceUrl="http://localhost:8080/index/rootContainer";
+        componentContainer.instance.sourceUrl="http://localhost:8080/pages/index";
     }
 }
