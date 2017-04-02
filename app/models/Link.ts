@@ -1,5 +1,5 @@
 export class Link {
-  text: string;
-  url: string;
+  content: string;
+  linkUrl: string;
   style: string;
 }
