@@ -16,6 +16,7 @@ import {NavbarModule} from './modules/navbar/navbar.module';
 import {JumbotronComponent} from './components/jumbotron/jumbotron.component';
 import {IndexContainer} from './rootcomponents/index-container';
 import {LinkComponent} from './components/link/link.component';
+import {EditImageComponent} from './components/image/edit-image/edit-image.component';
  @NgModule({
   imports: [
     BrowserModule,
@@ -33,11 +34,12 @@ import {LinkComponent} from './components/link/link.component';
     ComponentContainer,
     CardComponent,
     LinkComponent,
-    IndexContainer
+    IndexContainer,
+    EditImageComponent
   ],
   providers: [
   ],
-  bootstrap: [ NavbarComponent, IndexContainer]
+  bootstrap: [ NavbarComponent, EditImageComponent]
   //MainpageCarouselComponent, CommentListComponent, InputFieldComponent, SelectFieldComponent, TextAreaFieldComponent
 })
 export class AppModule {

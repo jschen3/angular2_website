@@ -1,0 +1,8 @@
+<div class="standard-image">
+    <div *ngIf="editing" class="image-editting">
+        <input type="file" class="upload-image" (change)="fileUpload($event)" placeholder="Upload image"/>
+    </div>
+    <div *ngIf="!editing" >
+        <img class="standard-image" (dblclick)="imageDoubleClicked()" src="{{image}}">
+    </div>
+</div>

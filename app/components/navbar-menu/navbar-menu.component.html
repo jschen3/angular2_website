@@ -1,7 +1,7 @@
 <div class="nav-wrapper blue-grey">
     <ul class="left hide-on-med-and-down">
         <li *ngFor="let link of links" class="nav-item" [ngClass]="link.active">
-            <a [ngClass]="link.style" href="{{link.url}}">{{link.text}}</a>
+            <a [ngClass]="link.style" href="{{link.linkUrl}}">{{link.content}}</a>
         </li>
     </ul>
 </div>

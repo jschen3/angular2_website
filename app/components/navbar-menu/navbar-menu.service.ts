@@ -9,10 +9,10 @@ export class NavbarMenuService {
 	private links:Link[];
 	getLinks():Link[]{
 		//this.http.get(this.sourceUrl).map(res => this.links=res.json());		
-	  	this.links=[{text: "Home", url:"/", style:"nav-link"},
-      				{text: "Resume", url:"/resume",style:"nav-link"},
-					{text: "Projects", url:"/projects", style:"nav-link"},
-					{text: "About Me", url:"/aboutme", style:"nav-link"},
+	  	this.links=[{content: "Home", linkUrl:"/", style:"nav-link"},
+      				{content: "Resume", linkUrl:"/resume",style:"nav-link"},
+					{content: "Projects", linkUrl:"/projects", style:"nav-link"},
+					{content: "About Me", linkUrl:"/aboutme", style:"nav-link"},
      				];
 		return this.links;
 	}

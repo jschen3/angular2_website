@@ -1,5 +1,5 @@
 export class BasicComponent {
-	componentType: String
-	sourceUrl: String
-	style:String
+	componentType: string
+	sourceUrl: string
+	style:string
 }
