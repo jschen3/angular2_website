@@ -1,4 +1,4 @@
 export class BasicComponentContent {
-	content:String
-	style: String
+	content:string
+	style: string
 }

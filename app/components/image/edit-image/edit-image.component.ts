@@ -9,7 +9,8 @@ import {ImageService} from '../image.service';
 })
 export class EditImageComponent implements OnInit{
     private editing:Boolean;
-    @Input() image:string;
+    image:string;
+    style:string;
     @Input() uploadUrl:string;
     @Input() componentPath:string[];
     constructor(private imageService:ImageService){
@@ -25,6 +26,12 @@ export class EditImageComponent implements OnInit{
     }
     fileUpload(event){
         this.imageService.uploadUrl=this.uploadUrl;
-        this.imageService.uploadFile(this.componentPath, event.target.files[0]);
+        this.imageService.uploadFile(this.componentPath, event.target.files[0]).then(
+            content=>{
+                this.image=content.content;
+                this.style=content.style;
+                this.editing=false;
+            }
+        );
     }
 }

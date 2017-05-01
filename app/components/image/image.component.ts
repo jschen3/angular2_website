@@ -10,8 +10,8 @@ import {BasicComponentContent} from '../../models/BasicComponentContent';
 })
 export class ImageComponent implements OnInit{
     @Input() sourceUrl
-    @Input() style
-    image;
+    style:string;
+    image:string;
     constructor(private imageService: ImageService){
         
     }
@@ -22,5 +22,4 @@ export class ImageComponent implements OnInit{
             this.style = content.style;
         });
     }
-    
 }

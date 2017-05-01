@@ -16,12 +16,25 @@ export class ImageService{
      getContent():Promise<BasicComponentContent>{
         return this.http.get(this.sourceUrl).toPromise().then(response => response.json() as BasicComponentContent);
     }
-     uploadFile(componentPath:string[], file:any):Promise<any>{
-        let headers:Headers = new Headers();
-        headers.append('Content-Type', undefined); 
-        let form = new FormData();
-        form.append("component", componentPath);
-        form.append("file", file);
-        return this.http.post(this.uploadUrl, form, {headers: headers}).toPromise();
+     uploadFile(componentPath:string[], file:any):Promise<BasicComponentContent>{
+        return new Promise((resolve, reject) =>{
+            var headers:Headers = new Headers();
+            headers.append('Content-Type', undefined); 
+            var form = new FormData();
+            form.append("component", componentPath);
+            form.append("file", file, file.name);
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState===4){
+                    if (xhr.status===200)
+                        resolve(JSON.parse(xhr.response));
+                    else
+                        reject(xhr.response);
+                }
+            }
+            xhr.open("POST", this.uploadUrl, true);
+            xhr.send(form);
+        });
+        
      }
 }
