@@ -1,0 +1,9 @@
+<div class="standard-text">
+    <div *ngIf="editing" class="text-editing">
+        <input type="text" class="edit-text-input" placeholder="Edit text"/>
+        <input type="button" class="edit-text-button" value="submit" onclick="textUpload()"/>
+    </div>
+    <div *ngIf="!editing" (dblclick)="textDoubleClicked()">
+        <p class="{{class}}">{{text}}</p>
+    </div>
+</div>
